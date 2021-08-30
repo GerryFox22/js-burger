@@ -1,0 +1,23 @@
+
+
+img {
+    width: 100%;
+}
+
+.ingredient-img {
+    width: 15%;
+}
+
+ul {
+    list-style: none;
+}
+
+#header {
+    background-color: orange;
+    height: 150px;
+}
+
+#footer {
+    background-color: red;
+    height: 150px;
+}

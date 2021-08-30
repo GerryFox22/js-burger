@@ -1,7 +1,7 @@
 let listaCoupon = ["capodanno", "natale", "pasqua", "compleanno"]
 
 let nomePanino = document.getElementById("burger-name");
-let prezzoFinalePanino = 0;
+
 let bottone = document.getElementById("calculate-button");
 
 
@@ -23,26 +23,26 @@ function (){
                 prezzoPartenzaPanino += 2 ;
 
             }
-            
         }
+        // console.log(prezzoPartenzaPanino);
         
-        console.log(prezzoPartenzaPanino);
+        let coupon = document.getElementById("insert-coupon");
+        // console.log(coupon.value);
 
-        prezzoFinalePanino += prezzoPartenzaPanino;
+        if (coupon.value.length > 0) {
+            if (listaCoupon.includes (coupon.value)){
+                prezzoPartenzaPanino = prezzoPartenzaPanino * 0.8;
+            }
+            else {
+                console.log("Il coupon non esiste")
+            }
+        }
+
+        console.log(prezzoPartenzaPanino);
+        document.getElementById("final-price").innerHTML = "&euro;" + prezzoPartenzaPanino;
+        
     }
+    
 
 });
-console.log(prezzoFinalePanino);
-  
-let coupon = document.getElementById("insert-coupon");
-console.log(coupon.value);
 
-// for (let y = 0; y < listaCoupon.length; y++){
-
-//     if ( coupon === listaCoupon[y]){
-//         prezzoPartenzaPanino = prezzoPartenzaPanino * 0.8;
-//     }
-
-// }
-
-// console.log(prezzoPartenzaPanino);
